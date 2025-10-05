@@ -1,0 +1,81 @@
+{
+  "name": "@caseyplummer/ts-enum-util",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Utility functions for enums in TypeScript",
+  "author": "Casey Plummer",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "enum",
+    "enums",
+    "enumeration",
+    "enumerations",
+    "util",
+    "utils",
+    "utility",
+    "utilities",
+    "typescript",
+    "javascript"
+  ],
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "clean:tsbuild": "rimraf --glob src/**/*.js src/**/*.js.map src/**/*.d.ts src/**/*.d.ts.map",
+    "clean:dist": "rimraf dist",
+    "clean": "npm run clean:tsbuild && npm run clean:dist",
+    "check": "tsc -p tsconfig.esm.json --noEmit && tsc -p tsconfig.cjs.json --noEmit",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs && npm run rename-cjs",
+    "rename-cjs": "cd dist/cjs && for %f in (*.js) do ren \"%f\" \"%~nf.cjs\" && for %f in (*.cjs) do (powershell -Command \"(Get-Content '%f') -replace '\\.js', '.cjs' | Set-Content '%f'\")",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/CaseyPlummer/ts-enum-util"
+  },
+  "bugs": {
+    "url": "https://github.com/CaseyPlummer/ts-enum-util/issues"
+  },
+  "homepage": "https://github.com/CaseyPlummer/ts-enum-util#readme",
+  "devDependencies": {
+    "@tsconfig/node-lts": "^22.0.2",
+    "@tsconfig/strictest": "^2.0.6",
+    "@types/node": "^20.19.17",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "eslint": "^9.27.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^5.0.10",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "files": [
+    "dist/**",
+    "README.md",
+    "LICENSE"
+  ],
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
