@@ -318,14 +318,6 @@ Optimized for performance with large enums:
 - Memory-conscious implementations
 - Tested with 1000+ enum entries
 
-## Contributing
-
-Contributions are welcome! Please see the [Contributing Guidelines](CONTRIBUTING.md) for details.
-
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for version history and breaking changes.
