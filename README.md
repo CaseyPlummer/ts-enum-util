@@ -4,7 +4,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/@caseyplummer/ts-enum-util.svg)](https://www.npmjs.com/package/@caseyplummer/ts-enum-util)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-A comprehensive TypeScript utility library for working with enums and enum-like objects. Provides type-safe functions for finding, validating, and converting enum values with flexible options for case-insensitive matching, type conversion, and custom normalization.
+A TypeScript utility library for working with enums and enum-like objects. Provides type-safe functions for finding, validating, and converting enum values with flexible options for case-insensitive matching, type conversion, and custom normalization.
 
 ## Features
 
@@ -14,7 +14,7 @@ A comprehensive TypeScript utility library for working with enums and enum-like 
 - 🎯 **Type-safe** with full TypeScript support and generics
 - 🚀 **Flexible** with custom converters and normalization functions
 - 📦 **Dual format** support (ESM and CommonJS)
-- 🧪 **Well tested** with 131+ comprehensive test cases
+- 🧪 **Well tested** with 130+ comprehensive test cases
 
 ## Installation
 
