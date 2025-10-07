@@ -1,6 +1,6 @@
 {
   "name": "@caseyplummer/ts-enum-util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "Utility functions for enums in TypeScript",
   "author": "Casey Plummer",
