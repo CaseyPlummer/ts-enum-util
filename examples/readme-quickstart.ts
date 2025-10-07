@@ -41,7 +41,7 @@ const isValidValue = isEnumValue(Color, '#ff0000'); // true
 const isValidKey = isEnumKey(Color, 'Blue'); // true
 
 // Convert string to enum value
-const value = toEnumValue(Color, 'red', { ignoreCase: true }); // '#ff0000'
+const greenValue = toEnumValue(Color, '#00FF00', { ignoreCase: true }); // '#00ff00'
 
 // Convert string to enum key
-const foundKey = toEnumKey(Color, 'red', { ignoreCase: true }); // 'Red'
+const greenKey = toEnumKey(Color, 'green', { ignoreCase: true }); // 'Green'
